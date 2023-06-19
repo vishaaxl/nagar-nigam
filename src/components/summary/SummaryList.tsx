@@ -15,7 +15,10 @@ export default function SummaryList({ data, title }: SummaryListProps) {
       </div>
       <ul className="mb-4">
         {data.map((item) => (
-          <li className="grid grid-cols-3 text-slate-700 mb-2 pl-3">
+          <li
+            className="grid grid-cols-3 text-slate-700 mb-2 pl-3"
+            key={item.id}
+          >
             <span className="font-medium">{item.title}</span>
             <span className="col-span-2">{item.value}</span>
           </li>
