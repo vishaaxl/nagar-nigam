@@ -1,6 +1,10 @@
+"use client";
+
 import PaymentSummary from "@/components/summary/PaymentSummary";
 import SummaryList from "@/components/summary/SummaryList";
 import Image from "next/image";
+
+import { AiFillCalendar, AiFillPrinter } from "react-icons/ai";
 
 interface pageProps {}
 
@@ -64,8 +68,13 @@ export default function ResultHouseId({}: pageProps) {
         <PaymentSummary data={paymentDetails} />
       </div>
       <div className="py-6 flex gap-2 justify-center items-center bg-slate-200">
-        <button className="min-w-[150px] flex justify-center py-2 px-4 bg-blue-800 rounded-sm text-white">
+        <button className="items-center gap-2 min-w-[150px] flex justify-center py-2 px-4 bg-[#0f97a7] rounded-sm text-white">
+          <AiFillPrinter />
           Print Receipt
+        </button>{" "}
+        <button className="items-center gap-2 min-w-[150px] flex justify-center py-2 px-4 bg-[#0f97a7] rounded-sm text-white">
+          <AiFillCalendar />
+          Set a Reminder
         </button>{" "}
       </div>
     </>

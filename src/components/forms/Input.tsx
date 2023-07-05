@@ -22,7 +22,7 @@ export default function Input({
 }: InputProps) {
   const [field, meta] = useField(name);
   return (
-    <div className="flex">
+    <div className="flex items-center">
       <label htmlFor="" className="text-slate-600 min-w-[150px]">
         {label}
         {required && <span className="text-red-500">*</span>}

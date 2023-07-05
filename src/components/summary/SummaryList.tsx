@@ -10,7 +10,7 @@ interface SummaryListProps {
 export default function SummaryList({ data, title }: SummaryListProps) {
   return (
     <div>
-      <div className="bg-red-700 text-white py-2 px-3 rounded-sm mb-2 font-medium">
+      <div className="bg-red-700 text-white py-2 px-3 rounded-sm mb-4 font-medium">
         {title}
       </div>
       <ul className="mb-4">

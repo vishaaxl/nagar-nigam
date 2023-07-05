@@ -3,6 +3,7 @@
 import { Form, Formik } from "formik";
 import Input from "./Input";
 import { useRouter } from "next/navigation";
+import { BiCurrentLocation } from "react-icons/bi";
 
 interface HousingProps {}
 
@@ -58,12 +59,20 @@ export default function Housing({}: HousingProps) {
               required
             />
             <Input
-              label="House Number"
-              placeholder="House Number"
-              name="houseNumber"
+              label="Father Name"
+              placeholder="Father Name"
+              name="fatherName"
               type="tel"
               required
             />
+            <div className="col-span-2 flex justify-end relative">
+              <span className="block h-[1px] w-full absolute bg-[#0f97a7] rounded-md top-[50%] translate-y-[-50%] z-1"></span>
+              <button className="flex items-center justify-center gap-2 text-white bg-[#0f97a7] py-2 px-4 rounded-md relative z-2">
+                <BiCurrentLocation />
+                use my location
+              </button>
+            </div>
+
             <Input
               label="Zone"
               placeholder="Please Select"
@@ -102,9 +111,9 @@ export default function Housing({}: HousingProps) {
               required
             />
             <Input
-              label="Father Name"
-              placeholder="Father Name"
-              name="fatherName"
+              label="House Number"
+              placeholder="House Number"
+              name="houseNumber"
               type="tel"
               required
             />
@@ -151,12 +160,12 @@ export default function Housing({}: HousingProps) {
       {/* submit buttons */}
       <div className="py-6 flex gap-2 justify-center items-center bg-slate-200">
         <button
-          className="min-w-[150px] flex justify-center py-2 px-4 bg-blue-800 rounded-sm text-white"
+          className="min-w-[150px] flex justify-center py-2 px-4 bg-[#0f97a7] rounded-sm text-white"
           onClick={() => router.push("/results/D8793-2023-24-CS-0736288")}
         >
           Search
         </button>{" "}
-        <button className="min-w-[150px] flex justify-center py-2 px-4 bg-blue-800 rounded-sm text-white">
+        <button className="min-w-[150px] flex justify-center py-2 px-4 bg-slate-600 rounded-sm text-white">
           Reset Information
         </button>
       </div>
